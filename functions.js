@@ -166,4 +166,62 @@ $(function () {
       $("#datepicker").datepicker("refresh");
     }
   });
+
 });
+
+/*======================= Mejoras Visuales =======================*/
+// Scroll suave para navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Precarga de imágenes para mejor rendimiento
+function preloadImages() {
+    const images = [
+        'portada.jpg',
+        'perfil.jpg',
+        'trabajando.jpg',
+        'boda.jpg',
+        'cumpleanos.jpg',
+        'casuales.jpg',
+        'evento1.jpg',
+        'evento2.jpg',
+        'evento3.jpg',
+        'evento4.jpg',
+        'evento5.jpg',
+        'evento6.jpg',
+        'evento7.jpg'
+    ];
+    
+    images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// Llamar a la precarga después de que cargue la página
+window.addEventListener('load', preloadImages);
+
+// Mejorar el carrusel para móviles - Versión corregida
+function adjustSwiperForMobile() {
+    if (window.innerWidth <= 430) {
+        swiper.params.slidesPerView = 1;
+        swiper.params.spaceBetween = 10;
+        swiper.update();
+    }
+}
+
+// Llamar al ajuste inicial
+adjustSwiperForMobile();
+
+// Y también cuando cambie el tamaño de la ventana
+window.addEventListener('resize', adjustSwiperForMobile);
