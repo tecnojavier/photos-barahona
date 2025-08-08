@@ -27,7 +27,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../img/portada.jpg');
+    background-image: url('portada.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.4; /* Ajusta este valor (de 0 a 1) para la opacidad deseada */
@@ -533,4 +533,5 @@ body {
     .footer-list {
         font-size: 0.8rem;
     }
+
 }
