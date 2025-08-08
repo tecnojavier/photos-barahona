@@ -1,0 +1,536 @@
+/* Estilos base */
+body {
+    background-color: #f9fafb;
+    color: #1f2937;
+    font-family: sans-serif;
+}
+
+/* Secciones */
+.section-blue {
+    background-color: #1e40af;
+    color: white;
+}
+
+/* Encabezado */
+.header {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    color: white; /* Asegura que el texto sea legible */
+    padding: 32px 24px;
+    text-align: center;
+    overflow: hidden; /* Evita que el pseudo-elemento se salga */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; /* Ajusta este valor (de 0 a 1) para la opacidad deseada */
+    z-index: -1; /* Coloca detrás del contenido */
+}
+
+.header-title, .header-subtitle {
+    position: relative; /* Asegura que el texto esté por encima del pseudo-elemento */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Mejor contraste */
+}
+
+/* Tus estilos existentes para título y subtítulo */
+.header-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1d4ed8; /* Cambiado a blanco para mejor contraste */
+    margin-bottom: 8px;
+}
+
+.header-subtitle {
+    color: #1d4ed8; /* Cambiado a blanco para mejor contraste */
+    font-size: 1.125rem;
+}
+
+/* Filtros */
+.filters {
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.filter-container {
+    display: inline-flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-button {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: #1e40af;
+}
+
+.filter-button.secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.filter-button.secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* Paquetes */
+.packages {
+    padding: 48px 24px;
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.package {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s ease;
+}
+
+.package.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.package-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+.package-features {
+    color: #374151;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.package-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.package-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.package-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* FAQ */
+.faq {
+    padding: 64px 24px;
+    background-color: white;
+}
+
+.faq-container {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.faq-item {
+    background-color: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.faq-answer {
+    color: #4b5563;
+}
+
+/* Contacto */
+.contact {
+    padding: 64px 24px;
+    background-color: #eff6ff;
+}
+
+.contact-container {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.contact-info {
+    margin-top: 32px;
+    text-align: center;
+    color: #4b5563;
+}
+
+.contact-info strong {
+    color: #1f2937;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .header {
+        padding: 32px 80px;
+    }
+    
+    .filters {
+        padding: 32px 80px;
+    }
+    
+    .packages {
+        padding: 48px 80px;
+    }
+    
+    .packages-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .faq {
+        padding: 64px 80px;
+    }
+    
+    .contact {
+        padding: 64px 80px;
+    }
+}
+
+/* Estilos para móviles (hasta 430px) */
+@media (max-width: 430px) {
+    .header-title {
+        font-size: 1.75rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1rem;
+    }
+    
+    .filter-container {
+        gap: 8px;
+    }
+    
+    .filter-button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .package-title {
+        font-size: 1.3rem;
+    }
+    
+    .package-features {
+        font-size: 0.9rem;
+    }
+    
+    .package-price {
+        font-size: 1.1rem;
+    }
+    
+    .faq-title, .contact-title {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+    
+    .faq-question {
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form {
+        padding: 24px;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .form-input, .form-textarea {
+        padding: 6px 10px;
+    }
+    
+    .contact-info {
+        font-size: 0.9rem;
+    }
+}
+
+/* Calendario */
+.calendar {
+    padding: 64px 24px;
+    background-color: #eff6ff;
+}
+
+.calendar-container {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.calendar-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.calendar-subtitle {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 32px;
+}
+
+.calendar-wrapper {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.calendar-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-button:hover {
+    background-color: #1d4ed8;
+}
+
+.calendar-button.secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.calendar-button.secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* Estilos para el datepicker */
+.ui-datepicker {
+    width: 100%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-family: inherit;
+}
+
+.ui-datepicker-header {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    cursor: pointer;
+    top: 5px;
+}
+
+.ui-datepicker-title {
+    margin-top: 5px;
+}
+
+.ui-datepicker-calendar th {
+    padding: 5px;
+    color: #1d4ed8;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0;
+    border: 1px solid #e5e7eb;
+}
+
+.ui-datepicker-calendar td a {
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #1d4ed8;
+    color: white;
+}
+
+.ui-datepicker-calendar .booked-date {
+    background: #ef4444;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e40af;
+    color: white;
+    padding: 40px 24px;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.footer-col {
+    margin-bottom: 24px;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.875rem;
+}
+
+.footer-link {
+    color: #bfdbfe;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #93c5fd;
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item, .calendar-wrapper {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .calendar {
+        padding: 64px 80px;
+    }
+    
+    .footer {
+        padding: 60px 80px;
+    }
+}
+
+@media (max-width: 430px) {
+    .calendar-title {
+        font-size: 1.5rem;
+    }
+    
+    .calendar-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .calendar-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .calendar-button {
+        width: 100%;
+    }
+    
+    .footer {
+        padding: 30px 20px;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-list {
+        font-size: 0.8rem;
+    }
+}

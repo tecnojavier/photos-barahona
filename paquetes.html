@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paquetes Fotográficos</title>
+    <link rel="stylesheet" href="css/styles-packages.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 🧭 Encabezado -->
+    <header class="header">
+        <h1 class="header-title">Nuestros Paquetes</h1>
+        <p class="header-subtitle">Elige el que mejor se adapte a tu evento y estilo</p>
+    </header>
+
+    <!-- 🔍 Filtros por tipo de evento -->
+    <section class="filters">
+        <div class="filter-container">
+            <button class="filter-button">Todos</button>
+            <button class="filter-button secondary">Bodas</button>
+            <button class="filter-button secondary">Cumpleaños</button>
+            <button class="filter-button secondary">Corporativos</button>
+        </div>
+    </section>
+
+    <!-- 🎁 Paquetes -->
+    <section class="packages">
+        <div class="packages-container">
+
+            <!-- Paquete Básico -->
+            <div class="package">
+                <h2 class="package-title">📷 Paquete Básico</h2>
+                <ul class="package-features">
+                    <li>✔ 1 hora de sesión</li>
+                    <li>✔ 20 fotos editadas</li>
+                    <li>✔ Entrega digital</li>
+                </ul>
+                <p class="package-price">$50 USD</p>
+                <a href="#" class="package-button whatsapp-btn">Solicitar</a>
+            </div>
+
+            <!-- Paquete Premium -->
+            <div class="package">
+                <h2 class="package-title">🌟 Paquete Premium</h2>
+                <ul class="package-features">
+                    <li>✔ 3 horas de cobertura</li>
+                    <li>✔ 60 fotos editadas</li>
+                    <li>✔ Álbum digital + físico</li>
+                    <li>✔ Sesión previa al evento</li>
+                </ul>
+                <p class="package-price">$120 USD</p>
+                <a href="#" class="package-button whatsapp-btn">Solicitar</a>
+            </div>
+
+            <!-- Paquete Deluxe -->
+            <div class="package">
+                <h2 class="package-title">🎉 Paquete Deluxe</h2>
+                <ul class="package-features">
+                    <li>✔ Cobertura completa del evento</li>
+                    <li>✔ 100+ fotos editadas</li>
+                    <li>✔ Álbum premium + video resumen</li>
+                    <li>✔ Entrega en USB personalizada</li>
+                </ul>
+                <p class="package-price">$200 USD</p>
+                <a href="#" class="package-button whatsapp-btn">Solicitar</a>
+            </div>
+
+            <!-- Paquetes de Bodas -->
+            <div class="package" data-category="bodas">
+                <h2 class="package-title">💍 Boda Básica</h2>
+                <ul class="package-features">
+                    <li>✔ 4 horas de cobertura</li>
+                    <li>✔ 50 fotos editadas</li>
+                    <li>✔ Sesión de pareja</li>
+                </ul>
+                <p class="package-price">$250 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Boda Básica">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="bodas">
+                <h2 class="package-title">💒 Boda Completa</h2>
+                <ul class="package-features">
+                    <li>✔ 8 horas de cobertura</li>
+                    <li>✔ 100 fotos editadas</li>
+                    <li>✔ Álbum digital</li>
+                    <li>✔ 2 fotógrafos</li>
+                </ul>
+                <p class="package-price">$400 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Boda Completa">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="bodas">
+                <h2 class="package-title">👰 Boda Premium</h2>
+                <ul class="package-features">
+                    <li>✔ 12 horas de cobertura</li>
+                    <li>✔ 200+ fotos editadas</li>
+                    <li>✔ Álbum físico premium</li>
+                    <li>✔ Video resumen</li>
+                </ul>
+                <p class="package-price">$600 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Boda Premium">Solicitar</a>
+            </div>
+
+            <!-- Paquetes de Cumpleaños -->
+            <div class="package" data-category="cumpleaños">
+                <h2 class="package-title">🎂 Cumpleaños Estándar</h2>
+                <ul class="package-features">
+                    <li>✔ 2 horas de cobertura</li>
+                    <li>✔ 30 fotos editadas</li>
+                    <li>✔ Entrega digital</li>
+                </ul>
+                <p class="package-price">$80 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Cumpleaños Estándar">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="cumpleaños">
+                <h2 class="package-title">🎉 Cumpleaños Familiar</h2>
+                <ul class="package-features">
+                    <li>✔ 3 horas de cobertura</li>
+                    <li>✔ 50 fotos editadas</li>
+                    <li>✔ Sesión familiar</li>
+                    <li>✔ Fotolibro digital</li>
+                </ul>
+                <p class="package-price">$120 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Cumpleaños Familiar">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="cumpleaños">
+                <h2 class="package-title">🥳 Fiesta Infantil</h2>
+                <ul class="package-features">
+                    <li>✔ 4 horas de cobertura</li>
+                    <li>✔ 80 fotos editadas</li>
+                    <li>✔ Sesión con el festejado</li>
+                    <li>✔ Fotolibro físico</li>
+                </ul>
+                <p class="package-price">$180 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Fiesta Infantil">Solicitar</a>
+            </div>
+
+            <!-- Paquetes Corporativos -->
+            <div class="package" data-category="corporativos">
+                <h2 class="package-title">💼 Evento Básico</h2>
+                <ul class="package-features">
+                    <li>✔ 2 horas de cobertura</li>
+                    <li>✔ 30 fotos editadas</li>
+                    <li>✔ Entrega digital</li>
+                </ul>
+                <p class="package-price">$100 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Evento Básico">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="corporativos">
+                <h2 class="package-title">🏢 Conferencia/Lanzamiento</h2>
+                <ul class="package-features">
+                    <li>✔ 4 horas de cobertura</li>
+                    <li>✔ 60 fotos editadas</li>
+                    <li>✔ Fotografía de producto</li>
+                    <li>✔ Entrega express (48h)</li>
+                </ul>
+                <p class="package-price">$200 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Conferencia/Lanzamiento">Solicitar</a>
+            </div>
+
+            <div class="package" data-category="corporativos">
+                <h2 class="package-title">📊 Corporativo Premium</h2>
+                <ul class="package-features">
+                    <li>✔ 8 horas de cobertura</li>
+                    <li>✔ 120+ fotos editadas</li>
+                    <li>✔ Video resumen del evento</li>
+                    <li>✔ Álbum ejecutivo</li>
+                </ul>
+                <p class="package-price">$350 USD</p>
+                <a href="#" class="package-button whatsapp-btn" data-package="Corporativo Premium">Solicitar</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ❓ Preguntas Frecuentes -->
+    <section class="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+
+                <!-- Pregunta 1 -->
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Cuánto tiempo tarda la entrega de las fotos?</h3>
+                    <p class="faq-answer">Normalmente entre 3 y 5 días hábiles, dependiendo del paquete y la cantidad de
+                        fotos.</p>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Puedo solicitar fotos adicionales?</h3>
+                    <p class="faq-answer">Sí, puedes solicitar fotos extra por un costo adicional. ¡Contáctanos para más
+                        detalles!</p>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Viajan a otras ciudades o departamentos?</h3>
+                    <p class="faq-answer">Sí, cubrimos eventos en todo El Salvador. Se puede aplicar un cargo adicional
+                        por transporte.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 📅 Calendario de Disponibilidad -->
+    <section id="calendario" class="calendar">
+        <div class="calendar-container">
+            <h2 class="calendar-title">Disponibilidad</h2>
+            <p class="calendar-subtitle">Fechas marcadas en rojo ya están reservadas</p>
+
+            <div class="calendar-wrapper">
+                <div id="datepicker"></div>
+            </div>
+
+            <div class="calendar-actions">
+                <button id="mark-date" class="calendar-button">Marcar fecha como reservada</button>
+                <button id="clear-date" class="calendar-button secondary">Limpiar selección</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔻 Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- 📬 Contacto -->
+                <div class="footer-col">
+                    <h3 class="footer-title">📬 Contáctanos</h3>
+                    <ul class="footer-list">
+                        <li>📱 Tel: <a href="tel:+50378572812" class="footer-link">+503 7857-2812</a></li>
+                        <li>💬 WhatsApp: <a href="https://wa.me/50378572812" target="_blank" class="footer-link">Enviar mensaje</a></li>
+                        <li>📧 Email: <a href="mailto:wbarahona550@gmail.com" class="footer-link">wbarahona550@gmail.com</a></li>
+                        <li>📍 Ubicación: C. San Luis La Herradura, Desvío hacia la Costa del Sol, San Pedro Masahuat. La Paz</li>
+                    </ul>
+                </div>
+
+                <!-- 🌐 Redes Sociales -->
+                <div class="footer-col">
+                    <h3 class="footer-title">🌐 Síguenos</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://www.facebook.com/willian.barahonac" class="footer-link">📘 Facebook</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61573408670900" class="footer-link">📘 Página de Facebook</a></li>
+                        <li><a href="https://www.instagram.com/williambarahona_26/" class="footer-link">📸 Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@williambarahona6309" class="footer-link">🎥 YouTube</a></li>
+                    </ul>
+                </div>
+
+                <!-- 🧭 Navegación Rápida -->
+                <div class="footer-col">
+                    <h3 class="footer-title">🧭 Navegación</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="#paquetes" class="footer-link">Paquetes</a></li>
+                        <li><a href="#calendario" class="footer-link">Disponibilidad</a></li>
+                        <li><a href="#faq" class="footer-link">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ⚖️ Derechos Reservados -->
+            <div class="footer-copyright">
+                © 2025 William Barahona. Todos los derechos reservados. 📸
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/functions-packages.js"></script>
+</body>
+
+</html>

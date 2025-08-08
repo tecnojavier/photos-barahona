@@ -1,0 +1,580 @@
+/* Estilos base */
+body {
+    background-color: #f3f4f6;
+    font-family: sans-serif;
+}
+
+/* Perfil superpuesto */
+.perfil-superpuesto {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 30;
+}
+
+/* Animaciones */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
+    position: relative;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 50;
+}
+
+.toggle-button {
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Portada */
+.portada {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portada-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada-content {
+    text-align: center;
+    color: white;
+}
+
+.portada-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.portada-subtitle {
+    font-size: 1.125rem;
+    margin-top: 8px;
+}
+
+/* Secciones */
+.section {
+    padding: 48px 24px;
+}
+
+.section-white {
+    background-color: white;
+}
+
+.section-gray {
+    background-color: #f9fafb;
+}
+
+.section-blue {
+    background-color: #1e40af;
+    color: white;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 24px;
+}
+
+.section-text {
+    color: #4b5563;
+    font-size: 1.125rem;
+}
+
+/* Grid layouts */
+.grid-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.grid-cols-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.card-text {
+    color: #4b5563;
+    margin-top: 8px;
+}
+
+/* Formulario */
+.form-container {
+    background-color: #eff6ff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 8px 16px;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.form-textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 8px 16px;
+    outline: none;
+    resize: vertical;
+}
+
+.form-button {
+    background-color: #16a34a;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #15803d;
+}
+
+/* Testimonios */
+.testimonial {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    color: #374151;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.testimonial-role {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: left;
+}
+
+/* Footer */
+.footer-link {
+    color: #bfdbfe;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 256px;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 40;
+}
+
+.side-menu.show {
+    transform: translateX(0);
+}
+
+.side-menu-list {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    color: #1f2937;
+}
+
+.side-menu-link {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.side-menu-link:hover {
+    color: #2563eb;
+}
+
+/* Animación scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el carrusel */
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Estilos específicos para móviles (hasta 430px) */
+@media (max-width: 430px) {
+    .portada-title {
+        font-size: 1.75rem;
+    }
+
+    .portada-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .swiper-slide img {
+        width: 95%;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .testimonial {
+        padding: 16px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-link {
+        font-size: 0.8rem;
+    }
+}
+
+/* Clases utilitarias */
+.max-width {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Calendario */
+.calendar {
+    padding: 64px 24px;
+    background-color: #eff6ff;
+}
+
+.calendar-container {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.calendar-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.calendar-subtitle {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 32px;
+}
+
+.calendar-wrapper {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.calendar-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-button:hover {
+    background-color: #1d4ed8;
+}
+
+.calendar-button.secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.calendar-button.secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* Estilos para el datepicker */
+.ui-datepicker {
+    width: 100%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-family: inherit;
+}
+
+.ui-datepicker-header {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    cursor: pointer;
+    top: 5px;
+}
+
+.ui-datepicker-title {
+    margin-top: 5px;
+}
+
+.ui-datepicker-calendar th {
+    padding: 5px;
+    color: #1d4ed8;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0;
+    border: 1px solid #e5e7eb;
+}
+
+.ui-datepicker-calendar td a {
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #1d4ed8;
+    color: white;
+}
+
+.ui-datepicker-calendar .booked-date {
+    background: #ef4444;
+    color: white;
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item,
+.calendar-wrapper {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.faq-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.faq-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.faq-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .calendar {
+        padding: 64px 80px;
+    }
+}
+
+@media (max-width: 430px) {
+    .calendar-title {
+        font-size: 1.5rem;
+    }
+
+    .calendar-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .calendar-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .calendar-button {
+        width: 100%;
+    }
+}

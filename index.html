@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotografía Profesional</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 🔵 Menú Toggle -->
+    <header>
+        <div class="menu-toggle">
+            <button id="toggleMenu" class="toggle-button">
+                ☰
+            </button>
+        </div>
+
+        <!-- 🖼️ Portada -->
+        <div class="portada" style="background-image: url('img/portada.jpg');">
+            <div class="portada-overlay">
+                <div class="portada-content">
+                    <h1 class="portada-title">William Barahona</h1>
+                    <p class="portada-subtitle">Fotografía & Video</p>
+                </div>
+            </div>
+
+            <!-- 🧑 Foto de Perfil -->
+            <img src="img/perfil.jpg" alt="Fotógrafo" class="perfil-superpuesto" />
+        </div>
+    </header>
+
+    <!-- 📖 Sección: Biografía -->
+    <section id="biografia" class="section section-white" style="margin-top: 96px;">
+        <div class="max-width grid-cols-2">
+
+            <!-- 📝 Texto de Biografía -->
+            <div>
+                <h2 class="section-title">Nuestra Historia</h2>
+                <p class="section-text">
+                    Desde hace un año, hemos capturado momentos únicos con pasión y profesionalismo.
+                    Lo que comenzó como un sueño se ha convertido en una experiencia visual que transforma recuerdos en
+                    arte.
+                    Cada evento que cubrimos es una oportunidad para contar una historia a través de la lente.
+                </p>
+                <p class="section-text" style="margin-top: 16px;">
+                    Nos especializamos en fotografía de bodas, cumpleaños, eventos corporativos y sesiones
+                    personalizadas.
+                    Nuestro compromiso es ofrecer imágenes que emocionen, inspiren y perduren.
+                </p>
+            </div>
+
+            <!-- 📸 Imagen del Fotógrafo -->
+            <div>
+                <img src="img/trabajando.jpg" alt="Fotógrafo trabajando" class="rounded-lg shadow-lg w-full" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 Sección: Experiencia -->
+    <section id="experiencia" class="section section-gray">
+        <div class="max-width text-center">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <p class="section-text" style="margin-bottom: 48px;">
+                Hemos documentado más de 100 eventos, cada uno con su propia esencia y emoción. Aquí están algunos de
+                los tipos de eventos que dominamos:
+            </p>
+
+            <!-- 🎯 Tipos de Eventos -->
+            <div class="grid-cols-3">
+                <div class="card">
+                    <img src="img/boda.jpg" alt="Bodas" style="width: 64px; margin: 0 auto 16px;" />
+                    <h3 class="card-title">Bodas</h3>
+                    <p class="card-text">Capturamos el amor, la emoción y cada detalle del gran día.</p>
+                </div>
+                <div class="card">
+                    <img src="img/cumpleanos.jpg" alt="Cumpleaños" style="width: 64px; margin: 0 auto 16px;" />
+                    <h3 class="card-title">Cumpleaños</h3>
+                    <p class="card-text">Momentos llenos de alegría, risas y celebración.</p>
+                </div>
+                <div class="card">
+                    <img src="img/casuales.jpg" alt="Eventos Corporativos" style="width: 64px; margin: 0 auto 16px;" />
+                    <h3 class="card-title">Casuales</h3>
+                    <p class="card-text">Fotografía profesional para momentos, ocasiones y hobbies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎞️ Sección: Carrusel de Eventos -->
+    <section id="eventos" class="section section-white">
+        <div class="max-width text-center">
+            <h2 class="section-title">Galería de Eventos</h2>
+            <p class="section-text" style="margin-bottom: 48px;">Una muestra de los momentos que hemos capturado con
+                dedicación.</p>
+
+            <!-- 🌀 Swiper Carrusel -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- 🖼️ Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/evento1.jpg" alt="Evento 1" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento2.jpg" alt="Evento 2" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento3.jpg" alt="Evento 3" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento4.jpg" alt="Evento 3" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento5.jpg" alt="Evento 3" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento6.jpg" alt="Evento 3" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/evento7.jpg" alt="Evento 3" class="rounded-lg"
+                            style="width: 50%; margin: 0 auto;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💬 Sección: Testimonios -->
+    <section id="testimonios" class="section section-gray">
+        <div class="max-width text-center">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <p class="section-text" style="margin-bottom: 48px;">Sus palabras reflejan el impacto de nuestro trabajo.
+            </p>
+
+            <!-- 🗣️ Testimonios -->
+            <div class="grid-cols-2">
+
+                <!-- Testimonio 1 -->
+                <div class="testimonial">
+                    <p class="testimonial-text">"Capturaron cada emoción de nuestra boda. Las fotos son mágicas y
+                        nos hacen revivir el día cada vez que las vemos."</p>
+                    <div>
+                        <h4 class="testimonial-author">— Ana & Luis</h4>
+                        <p class="testimonial-role">Boda en San Salvador</p>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial">
+                    <p class="testimonial-text">"Profesionalismo, puntualidad y una mirada artística que elevó
+                        nuestro evento corporativo. ¡Recomendado al 100%!"</p>
+                    <div>
+                        <h4 class="testimonial-author">— Carla Méndez</h4>
+                        <p class="testimonial-role">Gerente de Marketing, Grupo Nova</p>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial">
+                    <p class="testimonial-text">"Mi sesión de cumpleaños fue divertida, relajada y las fotos
+                        quedaron espectaculares. ¡Gracias por hacerlo tan especial!"</p>
+                    <div>
+                        <h4 class="testimonial-author">— Diego Rivas</h4>
+                        <p class="testimonial-role">Sesión en Cuscatancingo</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 📆 Sección: Agenda tu evento -->
+    <section id="agenda" class="section section-white">
+        <div class="max-width animate-on-scroll">
+            <h2 class="section-title" style="color: #1d4ed8; text-align: center;">Agenda tu evento</h2>
+            <p class="section-text" style="text-align: center; margin-bottom: 40px;">Reserva tu sesión de fotografía de
+                forma rápida y
+                sencilla. ¡Nos encargamos de capturar tus mejores momentos!</p>
+
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha" class="form-label">Fecha del evento</label>
+                    <input type="date" id="fecha" name="fecha" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo" class="form-label">Tipo de evento</label>
+                    <select id="tipo" name="tipo" class="form-input" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="boda">Boda</option>
+                        <option value="cumpleaños">Cumpleaños</option>
+                        <option value="corporativo">Corporativo</option>
+                        <option value="personalizado">Sesión personalizada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje" class="form-label">Mensaje adicional</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="form-textarea"></textarea>
+                </div>
+                <button type="button" onclick="enviarWhatsApp()" class="form-button">Reservar por WhatsApp</button>
+            </form>
+        </div>
+
+        <!-- 📅 Calendario de Disponibilidad -->
+        <div class="calendar-container">
+            <h2 class="calendar-title">Disponibilidad</h2>
+            <p class="calendar-subtitle">Fechas marcadas en rojo ya están reservadas</p>
+
+            <div class="calendar-wrapper">
+                <div id="datepicker"></div>
+            </div>
+
+            <div class="calendar-actions">
+                <button id="mark-date" class="calendar-button">Marcar fecha como reservada</button>
+                <button id="clear-date" class="calendar-button secondary">Limpiar selección</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 🔻 Footer -->
+    <footer id="contacto" class="section-blue" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="max-width grid-cols-3">
+
+            <!-- 📬 Contacto -->
+            <div>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 16px;">📬 Contáctanos</h3>
+                <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem;">
+                    <li>📱 Tel: <a href="tel:+50378572812" class="footer-link">+503 7857-2812</a></li>
+                    <li>💬 WhatsApp: <a href="https://wa.me/50378572812" target="_blank" class="footer-link">Enviar
+                            mensaje</a></li>
+                    <li>📧 Email: <a href="mailto:wbarahona550@gmail.com" class="footer-link">wbarahona550@gmail.com</a>
+                    </li>
+                    <li>📍 Ubicación: C. San Luis La Herradura, Desvío hacia la Costa del Sol, San Pedro Masahuat. La Paz</li>
+                </ul>
+            </div>
+
+            <!-- 🌐 Redes Sociales -->
+            <div>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 16px;">🌐 Síguenos</h3>
+                <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem;">
+                    <li><a href="https://www.facebook.com/willian.barahonac" class="footer-link">📘 Facebook</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61573408670900" class="footer-link">📘 Página de Facebook</a></li>
+                    <li><a href="https://www.instagram.com/williambarahona_26/" class="footer-link">📸 Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@williambarahona6309" class="footer-link">🎥 YouTube</a></li>
+                </ul>
+            </div>
+
+            <!-- 🧭 Navegación Rápida -->
+            <div>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 16px;">🧭 Navegación</h3>
+                <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem;">
+                    <li><a href="#inicio" class="footer-link">Inicio</a></li>
+                    <li><a href="#servicios" class="footer-link">Servicios</a></li>
+                    <li><a href="#eventos" class="footer-link">Galería</a></li>
+                    <li><a href="#contacto" class="footer-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ⚖️ Derechos Reservados -->
+        <div style="margin-top: 40px; text-align: center; font-size: 0.75rem; color: #93c5fd;">
+            © 2025 William Barahona. Todos los derechos reservados. 📸
+        </div>
+    </footer>
+
+
+    <!-- 📋 Menú Lateral Oculto -->
+    <nav id="menu" class="side-menu">
+        <ul class="side-menu-list">
+            <li><a href="#biografia" class="side-menu-link menu-item">Biografía</a></li>
+            <li><a href="#experiencia" class="side-menu-link menu-item">Experiencia</a></li>
+            <li><a href="#eventos" class="side-menu-link menu-item">Eventos</a></li>
+            <li><a href="paquetes.html" class="side-menu-link menu-item">Paquetes</a></li>
+            <li><a href="#agenda" class="side-menu-link menu-item">Agenda tu evento</a></li>
+            <li><a href="#contacto" class="side-menu-link menu-item">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
